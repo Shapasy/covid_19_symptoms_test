@@ -1,0 +1,144 @@
+* {
+  margin: 0px 5px;
+}
+
+body {
+  background-color: #95c6d4;
+}
+
+#main_image {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+
+#main_container {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+}
+
+#main_container > h1 {
+  text-align: center;
+  color: rgb(219, 69, 119);
+}
+
+.success_button {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.success_button:hover {
+  background-color: rgba(0, 128, 0, 0.6);
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: rgb(4, 34, 34);
+  width: 97%;
+  margin: 0px auto;
+  padding: 1px 0;
+}
+
+.question input[type="checkbox"] {
+  color: "blue";
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#result_container_wrap {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  right: -5px;
+  display: none;
+}
+
+#result_container {
+  background-color: rgba(128, 128, 128, 0.8);
+  border-radius: 20px;
+  position: fixed;
+  top: 35%;
+  bottom: 35%;
+  left: 25%;
+  right: 25%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: 0.5s result_container_animation ease-in-out forwards;
+}
+
+#result_container > * {
+  margin: 10px 0;
+}
+
+#result_container > button {
+  width: 80%;
+}
+
+@keyframes result_container_animation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #main_image {
+    width: 90%;
+  }
+  #main_container {
+    width: 100%;
+  }
+  #result_container {
+    top: 35%;
+    bottom: 35%;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1100px) {
+  #main_image {
+    width: 50%;
+  }
+  #main_container {
+    width: 85%;
+  }
+  #result_container {
+    top: 40%;
+    bottom: 40%;
+    left: 25%;
+    right: 25%;
+  }
+}
